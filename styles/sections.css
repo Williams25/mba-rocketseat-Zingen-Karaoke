@@ -1,0 +1,34 @@
+#smartphone-img {
+  background: url(../assets/hero.svg) top/cover;
+  margin-top: 5rem;
+}
+
+section {
+  & header {
+    & strong {
+      display: block;
+      font-weight: var(--fw-md);
+      font-size: var(--fs-sm);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brand-color-primary);
+    }
+
+    & h2 {
+      display: block;
+      margin-top: 0.5rem;
+    }
+  }
+
+  & p {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-color-secondary);
+  }
+}
+
+@media (width >= 1280px) {
+  #smartphone-img {
+    display: none;
+  }
+}

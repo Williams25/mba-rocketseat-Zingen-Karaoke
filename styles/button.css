@@ -1,0 +1,112 @@
+.btn-primary {
+  color: var(--surface-color);
+  background-color: var(--text-color-primary);
+  transition: 0.2s linear;
+  border-radius: 0.5rem;
+  font-weight: var(--fw-md);
+  border: 0;
+  outline: none;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(
+    to right,
+    var(--brand-gradient),
+    var(--brand-color-primary)
+  );
+  color: var(--surface-color);
+}
+
+.btn-secondary {
+  position: relative;
+  color: var(--text-color-primary);
+  background-color: var(--background-color);
+  transition: 0.2s linear;
+  font-weight: var(--fw-md);
+  border: 1px solid var(--text-color-primary);
+  border-radius: 0.5rem;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-secondary:hover {
+  border: double 1px transparent;
+  background-image: linear-gradient(
+      var(--background-color),
+      var(--background-color)
+    ),
+    linear-gradient(var(--brand-gradient), var(--brand-color-primary));
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.btn-secondary:hover span {
+  position: relative;
+  z-index: 0;
+  background: linear-gradient(
+    to right,
+    var(--brand-gradient),
+    var(--brand-color-primary)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.btn-secondary:hover::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--background-color);
+  z-index: -1;
+  border-radius: 0.5rem;
+}
+
+.btn-lg {
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+}
+
+.btn-lg span {
+  font-size: 1.125rem;
+  display: block;
+  text-align: center;
+}
+
+.btn-md {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-md span {
+  font-size: 1rem;
+  display: block;
+  text-align: center;
+}
+
+.btn-sm {
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.btn-sm span {
+  font-size: 0.875rem;
+  display: block;
+  text-align: center;
+}
